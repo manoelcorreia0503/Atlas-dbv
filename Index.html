@@ -1,1 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Orion DBV</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f6f8;
+      color: #1f2937;
+    }
+
+    header {
+      background: #0b3d2e;
+      color: white;
+      padding: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 22px;
+    }
+
+    header span {
+      font-size: 13px;
+      opacity: 0.85;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .welcome {
+      margin-bottom: 20px;
+    }
+
+    .welcome h2 {
+      margin-bottom: 5px;
+    }
+
+    .welcome p {
+      color: #6b7280;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 22px 15px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .icon {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .section-title {
+      margin: 30px 0 15px;
+      font-size: 20px;
+    }
+
+    .info-box {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    .info-box p {
+      margin: 8px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #6b7280;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <h1>🌟 Orion DBV</h1>
+      <span>Sistema de Gestão para Clubes de Desbravadores</span>
+    </div>
+
+    <div>
+      ⚙️
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="welcome">
+      <h2>Olá, Administrador! 👋</h2>
+      <p>Bem-vindo ao Orion DBV.</p>
+    </section>
+
+    <section class="cards">
+
+      <div class="card">
+        <div class="icon">👥</div>
+        <h3>Membros</h3>
+        <p>Gerencie os membros do clube</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏕️</div>
+        <h3>Unidades</h3>
+        <p>Organize as unidades do clube</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>Classes</h3>
+        <p>Acompanhe o progresso das classes</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎖️</div>
+        <h3>Especialidades</h3>
+        <p>Gerencie especialidades e requisitos</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Progresso</h3>
+        <p>Acompanhe o desenvolvimento dos membros</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📅</div>
+        <h3>Agenda</h3>
+        <p>Veja reuniões, eventos e atividades</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📋</div>
+        <h3>Presenças</h3>
+        <p>Registre e acompanhe a frequência</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📜</div>
+        <h3>Certificados</h3>
+        <p>Gerencie certificados e conquistas</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📖</div>
+        <h3>Bíblia</h3>
+        <p>Acesso ao estudo bíblico</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📆</div>
+        <h3>Ano Bíblico</h3>
+        <p>Acompanhe a leitura bíblica</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>Biblioteca</h3>
+        <p>Acesse materiais permitidos</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏆</div>
+        <h3>Conquistas</h3>
+        <p>Veja as conquistas dos membros</p>
+      </div>
+
+    </section>
+
+    <h2 class="section-title">Resumo do Clube</h2>
+
+    <section class="info-box">
+      <p>👥 Membros cadastrados: <strong>0</strong></p>
+      <p>🏕️ Unidades ativas: <strong>0</strong></p>
+      <p>📅 Próxima reunião: <strong>Nenhuma cadastrada</strong></p>
+      <p>📊 Progresso geral: <strong>0%</strong></p>
+    </section>
+
+  </main>
+
+  <footer>
+    Orion DBV © 2026<br>
+    Sistema de Gestão para Clubes de Desbravadores
+  </footer>
+
+</body>
+</html>
