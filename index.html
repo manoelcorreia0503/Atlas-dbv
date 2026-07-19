@@ -106,6 +106,36 @@
       margin: 8px 0;
     }
 
+    .pagina {
+      display: none;
+    }
+
+    .pagina.ativa {
+      display: block;
+    }
+
+    .botao-voltar {
+      background: #0b3d2e;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+
+    .botao-voltar:hover {
+      opacity: 0.9;
+    }
+
+    .conteudo-modulo {
+      background: white;
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
     footer {
       text-align: center;
       padding: 25px;
@@ -123,109 +153,273 @@
       <span>Sistema de Gestão para Clubes de Desbravadores</span>
     </div>
 
-    <div>
-      ⚙️
-    </div>
+    <div>⚙️</div>
   </header>
 
-  <main class="container">
+  <!-- PAINEL PRINCIPAL -->
 
-    <section class="welcome">
-      <h2>Olá, Administrador! 👋</h2>
-      <p>Bem-vindo ao Orion DBV.</p>
-    </section>
+  <main id="painel" class="pagina ativa">
 
-    <section class="cards">
+    <div class="container">
 
-      <div class="card">
-        <div class="icon">👥</div>
-        <h3>Membros</h3>
-        <p>Gerencie os membros do clube</p>
+      <section class="welcome">
+        <h2>Olá, Administrador! 👋</h2>
+        <p>Bem-vindo ao Orion DBV.</p>
+      </section>
+
+      <section class="cards">
+
+        <div class="card" onclick="abrirPagina('membros')">
+          <div class="icon">👥</div>
+          <h3>Membros</h3>
+          <p>Gerencie os membros do clube</p>
+        </div>
+
+        <div class="card" onclick="abrirPagina('unidades')">
+          <div class="icon">🏕️</div>
+          <h3>Unidades</h3>
+          <p>Organize as unidades do clube</p>
+        </div>
+
+        <div class="card" onclick="abrirPagina('classes')">
+          <div class="icon">📚</div>
+          <h3>Classes</h3>
+          <p>Acompanhe o progresso das classes</p>
+        </div>
+
+        <div class="card" onclick="abrirPagina('especialidades')">
+          <div class="icon">🎖️</div>
+          <h3>Especialidades</h3>
+          <p>Gerencie especialidades e requisitos</p>
+        </div>
+
+        <div class="card" onclick="abrirPagina('progresso')">
+          <div class="icon">📈</div>
+          <h3>Progresso</h3>
+          <p>Acompanhe o desenvolvimento dos membros</p>
+        </div>
+
+        <div class="card" onclick="abrirPagina('agenda')">
+          <div class="icon">📅</div>
+          <h3>Agenda</h3>
+          <p>Veja reuniões e eventos</p>
+        </div>
+
+        <div class="card" onclick="abrirPagina('presencas')">
+          <div class="icon">📋</div>
+          <h3>Presenças</h3>
+          <p>Registre e acompanhe a frequência</p>
+        </div>
+
+        <div class="card" onclick="abrirPagina('certificados')">
+          <div class="icon">📜</div>
+          <h3>Certificados</h3>
+          <p>Gerencie certificados</p>
+        </div>
+
+        <div class="card" onclick="abrirPagina('biblia')">
+          <div class="icon">📖</div>
+          <h3>Bíblia</h3>
+          <p>Acesso ao estudo bíblico</p>
+        </div>
+
+        <div class="card" onclick="abrirPagina('ano-biblico')">
+          <div class="icon">📆</div>
+          <h3>Ano Bíblico</h3>
+          <p>Acompanhe a leitura bíblica</p>
+        </div>
+
+        <div class="card" onclick="abrirPagina('biblioteca')">
+          <div class="icon">📚</div>
+          <h3>Biblioteca</h3>
+          <p>Acesse materiais permitidos</p>
+        </div>
+
+        <div class="card" onclick="abrirPagina('conquistas')">
+          <div class="icon">🏆</div>
+          <h3>Conquistas</h3>
+          <p>Veja as conquistas dos membros</p>
+        </div>
+
+      </section>
+
+      <h2 class="section-title">Resumo do Clube</h2>
+
+      <section class="info-box">
+        <p>👥 Membros cadastrados: <strong>0</strong></p>
+        <p>🏕️ Unidades ativas: <strong>0</strong></p>
+        <p>📅 Próxima reunião: <strong>Nenhuma cadastrada</strong></p>
+        <p>📊 Progresso geral: <strong>0%</strong></p>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- PÁGINAS DOS MÓDULOS -->
+
+  <main id="membros" class="pagina">
+    <div class="container">
+      <button class="botao-voltar" onclick="voltarPainel()">← Voltar ao painel</button>
+      <div class="conteudo-modulo">
+        <h2>👥 Membros</h2>
+        <br>
+        <p>Aqui ficará o cadastro e gerenciamento dos membros do clube.</p>
       </div>
+    </div>
+  </main>
 
-      <div class="card">
-        <div class="icon">🏕️</div>
-        <h3>Unidades</h3>
-        <p>Organize as unidades do clube</p>
+  <main id="unidades" class="pagina">
+    <div class="container">
+      <button class="botao-voltar" onclick="voltarPainel()">← Voltar ao painel</button>
+      <div class="conteudo-modulo">
+        <h2>🏕️ Unidades</h2>
+        <br>
+        <p>Aqui ficarão as unidades e seus integrantes.</p>
       </div>
+    </div>
+  </main>
 
-      <div class="card">
-        <div class="icon">📚</div>
-        <h3>Classes</h3>
-        <p>Acompanhe o progresso das classes</p>
+  <main id="classes" class="pagina">
+    <div class="container">
+      <button class="botao-voltar" onclick="voltarPainel()">← Voltar ao painel</button>
+      <div class="conteudo-modulo">
+        <h2>📚 Classes</h2>
+        <br>
+        <p>Aqui serão acompanhados os requisitos das classes.</p>
       </div>
+    </div>
+  </main>
 
-      <div class="card">
-        <div class="icon">🎖️</div>
-        <h3>Especialidades</h3>
-        <p>Gerencie especialidades e requisitos</p>
+  <main id="especialidades" class="pagina">
+    <div class="container">
+      <button class="botao-voltar" onclick="voltarPainel()">← Voltar ao painel</button>
+      <div class="conteudo-modulo">
+        <h2>🎖️ Especialidades</h2>
+        <br>
+        <p>Aqui serão gerenciadas as especialidades e seus requisitos.</p>
       </div>
+    </div>
+  </main>
 
-      <div class="card">
-        <div class="icon">📈</div>
-        <h3>Progresso</h3>
-        <p>Acompanhe o desenvolvimento dos membros</p>
+  <main id="progresso" class="pagina">
+    <div class="container">
+      <button class="botao-voltar" onclick="voltarPainel()">← Voltar ao painel</button>
+      <div class="conteudo-modulo">
+        <h2>📈 Progresso</h2>
+        <br>
+        <p>Aqui será acompanhado o progresso dos membros.</p>
       </div>
+    </div>
+  </main>
 
-      <div class="card">
-        <div class="icon">📅</div>
-        <h3>Agenda</h3>
-        <p>Veja reuniões, eventos e atividades</p>
+  <main id="agenda" class="pagina">
+    <div class="container">
+      <button class="botao-voltar" onclick="voltarPainel()">← Voltar ao painel</button>
+      <div class="conteudo-modulo">
+        <h2>📅 Agenda</h2>
+        <br>
+        <p>Aqui aparecerão as reuniões e eventos do clube.</p>
       </div>
+    </div>
+  </main>
 
-      <div class="card">
-        <div class="icon">📋</div>
-        <h3>Presenças</h3>
-        <p>Registre e acompanhe a frequência</p>
+  <main id="presencas" class="pagina">
+    <div class="container">
+      <button class="botao-voltar" onclick="voltarPainel()">← Voltar ao painel</button>
+      <div class="conteudo-modulo">
+        <h2>📋 Presenças</h2>
+        <br>
+        <p>Aqui será feito o controle de presença.</p>
       </div>
+    </div>
+  </main>
 
-      <div class="card">
-        <div class="icon">📜</div>
-        <h3>Certificados</h3>
-        <p>Gerencie certificados e conquistas</p>
+  <main id="certificados" class="pagina">
+    <div class="container">
+      <button class="botao-voltar" onclick="voltarPainel()">← Voltar ao painel</button>
+      <div class="conteudo-modulo">
+        <h2>📜 Certificados</h2>
+        <br>
+        <p>Aqui serão gerenciados os certificados.</p>
       </div>
+    </div>
+  </main>
 
-      <div class="card">
-        <div class="icon">📖</div>
-        <h3>Bíblia</h3>
-        <p>Acesso ao estudo bíblico</p>
+  <main id="biblia" class="pagina">
+    <div class="container">
+      <button class="botao-voltar" onclick="voltarPainel()">← Voltar ao painel</button>
+      <div class="conteudo-modulo">
+        <h2>📖 Bíblia</h2>
+        <br>
+        <p>Aqui ficará o acesso aos recursos bíblicos permitidos.</p>
       </div>
+    </div>
+  </main>
 
-      <div class="card">
-        <div class="icon">📆</div>
-        <h3>Ano Bíblico</h3>
-        <p>Acompanhe a leitura bíblica</p>
+  <main id="ano-biblico" class="pagina">
+    <div class="container">
+      <button class="botao-voltar" onclick="voltarPainel()">← Voltar ao painel</button>
+      <div class="conteudo-modulo">
+        <h2>📆 Ano Bíblico</h2>
+        <br>
+        <p>Aqui será acompanhado o progresso do Ano Bíblico.</p>
       </div>
+    </div>
+  </main>
 
-      <div class="card">
-        <div class="icon">📚</div>
-        <h3>Biblioteca</h3>
-        <p>Acesse materiais permitidos</p>
+  <main id="biblioteca" class="pagina">
+    <div class="container">
+      <button class="botao-voltar" onclick="voltarPainel()">← Voltar ao painel</button>
+      <div class="conteudo-modulo">
+        <h2>📚 Biblioteca</h2>
+        <br>
+        <p>Aqui ficarão os materiais permitidos para estudo.</p>
       </div>
+    </div>
+  </main>
 
-      <div class="card">
-        <div class="icon">🏆</div>
-        <h3>Conquistas</h3>
-        <p>Veja as conquistas dos membros</p>
+  <main id="conquistas" class="pagina">
+    <div class="container">
+      <button class="botao-voltar" onclick="voltarPainel()">← Voltar ao painel</button>
+      <div class="conteudo-modulo">
+        <h2>🏆 Conquistas</h2>
+        <br>
+        <p>Aqui serão exibidas as conquistas dos membros.</p>
       </div>
-
-    </section>
-
-    <h2 class="section-title">Resumo do Clube</h2>
-
-    <section class="info-box">
-      <p>👥 Membros cadastrados: <strong>0</strong></p>
-      <p>🏕️ Unidades ativas: <strong>0</strong></p>
-      <p>📅 Próxima reunião: <strong>Nenhuma cadastrada</strong></p>
-      <p>📊 Progresso geral: <strong>0%</strong></p>
-    </section>
-
+    </div>
   </main>
 
   <footer>
     Orion DBV © 2026<br>
     Sistema de Gestão para Clubes de Desbravadores
   </footer>
+
+  <script>
+
+    function abrirPagina(id) {
+
+      document.querySelectorAll('.pagina').forEach(function(pagina) {
+        pagina.classList.remove('ativa');
+      });
+
+      document.getElementById(id).classList.add('ativa');
+
+      window.scrollTo(0, 0);
+    }
+
+    function voltarPainel() {
+
+      document.querySelectorAll('.pagina').forEach(function(pagina) {
+        pagina.classList.remove('ativa');
+      });
+
+      document.getElementById('painel').classList.add('ativa');
+
+      window.scrollTo(0, 0);
+    }
+
+  </script>
 
 </body>
 </html>
