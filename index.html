@@ -1,7 +1,4 @@
-<!DOCTYPE html><html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Orion DBV - Neblina do Oeste</title>  <style>
+<!DOCTYPE html><html lang="pt-BR"><head>  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Orion DBV</title>  <style>
 
     * {
       box-sizing: border-box;
@@ -228,5 +225,1045 @@
     }
 
   </style></head><body>  <header><div>
+
   <h1>🌟 Orion DBV</h1>
-  <s
+
+  <span>
+    Clube Neblina do Oeste
+  </span>
+
+</div>
+
+<div>
+  ⚙️
+</div>
+
+  </header>  <!-- PAINEL PRINCIPAL -->  <main id="painel" class="pagina ativa"><div class="container">
+
+
+  <section class="welcome">
+
+    <h2>
+      Olá, Administrador! 👋
+    </h2>
+
+    <p>
+      Bem-vindo ao Orion DBV.
+    </p>
+
+  </section>
+
+
+  <section class="cards">
+
+
+    <div class="card"
+         onclick="abrirPagina('membros')">
+
+      <div class="icon">
+        👥
+      </div>
+
+      <h3>
+        Membros
+      </h3>
+
+      <p>
+        Gerencie os membros do clube
+      </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="abrirPagina('unidades')">
+
+      <div class="icon">
+        🏕️
+      </div>
+
+      <h3>
+        Unidades
+      </h3>
+
+      <p>
+        Organize as unidades do clube
+      </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="abrirPagina('classes')">
+
+      <div class="icon">
+        📚
+      </div>
+
+      <h3>
+        Classes
+      </h3>
+
+      <p>
+        Acompanhe o progresso das classes
+      </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="abrirPagina('especialidades')">
+
+      <div class="icon">
+        🎖️
+      </div>
+
+      <h3>
+        Especialidades
+      </h3>
+
+      <p>
+        Gerencie especialidades e requisitos
+      </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="abrirPagina('progresso')">
+
+      <div class="icon">
+        📈
+      </div>
+
+      <h3>
+        Progresso
+      </h3>
+
+      <p>
+        Acompanhe o desenvolvimento dos membros
+      </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="abrirPagina('agenda')">
+
+      <div class="icon">
+        📅
+      </div>
+
+      <h3>
+        Agenda
+      </h3>
+
+      <p>
+        Veja reuniões e eventos
+      </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="abrirPagina('presencas')">
+
+      <div class="icon">
+        📋
+      </div>
+
+      <h3>
+        Presenças
+      </h3>
+
+      <p>
+        Registre e acompanhe a frequência
+      </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="abrirPagina('certificados')">
+
+      <div class="icon">
+        📜
+      </div>
+
+      <h3>
+        Certificados
+      </h3>
+
+      <p>
+        Gerencie certificados
+      </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="abrirPagina('biblia')">
+
+      <div class="icon">
+        📖
+      </div>
+
+      <h3>
+        Bíblia
+      </h3>
+
+      <p>
+        Acesso ao estudo bíblico
+      </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="abrirPagina('ano-biblico')">
+
+      <div class="icon">
+        📆
+      </div>
+
+      <h3>
+        Ano Bíblico
+      </h3>
+
+      <p>
+        Acompanhe a leitura bíblica
+      </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="abrirPagina('biblioteca')">
+
+      <div class="icon">
+        📚
+      </div>
+
+      <h3>
+        Biblioteca
+      </h3>
+
+      <p>
+        Acesse materiais permitidos
+      </p>
+
+    </div>
+
+
+    <div class="card"
+         onclick="abrirPagina('conquistas')">
+
+      <div class="icon">
+        🏆
+      </div>
+
+      <h3>
+        Conquistas
+      </h3>
+
+      <p>
+        Veja as conquistas dos membros
+      </p>
+
+    </div>
+
+
+  </section>
+
+
+  <h2 class="section-title">
+    Resumo do Clube
+  </h2>
+
+
+  <section class="info-box">
+
+    <p>
+      👥 Membros cadastrados:
+      <strong>0</strong>
+    </p>
+
+    <p>
+      🏕️ Unidades ativas:
+      <strong>4</strong>
+    </p>
+
+    <p>
+      📅 Próxima reunião:
+      <strong>
+        Nenhuma cadastrada
+      </strong>
+    </p>
+
+    <p>
+      📊 Progresso geral:
+      <strong>
+        0%
+      </strong>
+    </p>
+
+  </section>
+
+
+</div>
+
+  </main>  <!-- PÁGINA DE MEMBROS -->  <main id="membros" class="pagina"><div class="container">
+
+
+  <button
+    class="botao-voltar"
+    onclick="voltarPainel()">
+
+    ← Voltar ao painel
+
+  </button>
+
+
+  <div class="cabecalho-modulo">
+
+
+    <div>
+
+      <h2>
+        👥 Membros
+      </h2>
+
+      <p>
+        Gerencie os membros do Clube Neblina do Oeste
+      </p>
+
+    </div>
+
+
+    <!-- ÚNICO BOTÃO DE ADICIONAR MEMBRO -->
+
+    <button
+      class="botao-principal"
+      onclick="mostrarFormularioMembro()">
+
+      + Adicionar membro
+
+    </button>
+
+
+  </div>
+
+
+  <div id="lista-membros">
+
+
+    <div class="estado-vazio">
+
+
+      <div class="estado-icone">
+        👥
+      </div>
+
+
+      <h3>
+        Nenhum membro cadastrado
+      </h3>
+
+
+      <p>
+        Comece adicionando o primeiro membro do clube.
+      </p>
+
+
+    </div>
+
+
+  </div>
+
+
+  <div
+    id="formulario-membro"
+    class="formulario"
+    style="display: none;">
+
+
+    <h3>
+      Adicionar membro
+    </h3>
+
+
+    <label>
+      Nome completo
+    </label>
+
+
+    <input
+      type="text"
+      id="nome-membro"
+      placeholder="Digite o nome completo">
+
+
+    <label>
+      Data de nascimento
+    </label>
+
+
+    <input
+      type="date"
+      id="nascimento-membro">
+
+
+    <label>
+      Unidade
+    </label>
+
+
+    <select id="unidade-membro">
+
+
+      <option value="">
+        Selecione uma unidade
+      </option>
+
+
+      <option value="Unidade Tornado">
+        Unidade Tornado
+      </option>
+
+
+      <option value="Unidade Avalanche">
+        Unidade Avalanche
+      </option>
+
+
+      <option value="Unidade Nevasca">
+        Unidade Nevasca
+      </option>
+
+
+      <option value="Unidade Universo">
+        Unidade Universo
+      </option>
+
+
+    </select>
+
+
+    <label>
+      Classe
+    </label>
+
+
+    <select id="classe-membro">
+
+
+      <option value="">
+        Selecione uma classe
+      </option>
+
+
+      <option value="Amigo">
+        Amigo
+      </option>
+
+
+      <option value="Companheiro">
+        Companheiro
+      </option>
+
+
+      <option value="Pesquisador">
+        Pesquisador
+      </option>
+
+
+      <option value="Excursionista">
+        Excursionista
+      </option>
+
+
+      <option value="Pioneiro">
+        Pioneiro
+      </option>
+
+
+      <option value="Guia">
+        Guia
+      </option>
+
+
+    </select>
+
+
+    <div class="botoes-formulario">
+
+
+      <button
+        class="botao-cancelar"
+        onclick="cancelarFormularioMembro()">
+
+        Cancelar
+
+      </button>
+
+
+      <button
+        class="botao-principal"
+        onclick="salvarMembro()">
+
+        Salvar membro
+
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+</div>
+
+  </main>  <!-- PÁGINA DE UNIDADES -->  <main id="unidades" class="pagina"><div class="container">
+
+
+  <button
+    class="botao-voltar"
+    onclick="voltarPainel()">
+
+    ← Voltar ao painel
+
+  </button>
+
+
+  <div class="conteudo-modulo">
+
+
+    <h2>
+      🏕️ Unidades
+    </h2>
+
+
+    <br>
+
+
+    <p>
+      Clube Neblina do Oeste
+    </p>
+
+
+    <br>
+
+
+    <p>
+      🌪️ Unidade Tornado
+    </p>
+
+    <p>
+      🏔️ Unidade Avalanche
+    </p>
+
+    <p>
+      ❄️ Unidade Nevasca
+    </p>
+
+    <p>
+      🌌 Unidade Universo
+    </p>
+
+
+  </div>
+
+
+</div>
+
+  </main>  <!-- PÁGINA DE CLASSES -->  <main id="classes" class="pagina"><div class="container">
+
+
+  <button
+    class="botao-voltar"
+    onclick="voltarPainel()">
+
+    ← Voltar ao painel
+
+  </button>
+
+
+  <div class="conteudo-modulo">
+
+
+    <h2>
+      📚 Classes
+    </h2>
+
+
+    <br>
+
+
+    <p>
+      🟢 Amigo
+    </p>
+
+    <p>
+      🔵 Companheiro
+    </p>
+
+    <p>
+      🟡 Pesquisador
+    </p>
+
+    <p>
+      🟠 Excursionista
+    </p>
+
+    <p>
+      🔴 Pioneiro
+    </p>
+
+    <p>
+      🟣 Guia
+    </p>
+
+
+  </div>
+
+
+</div>
+
+  </main>  <!-- PÁGINA DE ESPECIALIDADES -->  <main id="especialidades" class="pagina"><div class="container">
+
+
+  <button
+    class="botao-voltar"
+    onclick="voltarPainel()">
+
+    ← Voltar ao painel
+
+  </button>
+
+
+  <div class="conteudo-modulo">
+
+
+    <h2>
+      🎖️ Especialidades
+    </h2>
+
+
+    <br>
+
+
+    <p>
+      Aqui serão gerenciadas as especialidades e seus requisitos.
+    </p>
+
+
+  </div>
+
+
+</div>
+
+  </main>  <!-- PÁGINA DE PROGRESSO -->  <main id="progresso" class="pagina"><div class="container">
+
+
+  <button
+    class="botao-voltar"
+    onclick="voltarPainel()">
+
+    ← Voltar ao painel
+
+  </button>
+
+
+  <div class="conteudo-modulo">
+
+
+    <h2>
+      📈 Progresso
+    </h2>
+
+
+    <br>
+
+
+    <p>
+      Aqui será acompanhado o progresso dos membros.
+    </p>
+
+
+  </div>
+
+
+</div>
+
+  </main>  <!-- PÁGINA DE AGENDA -->  <main id="agenda" class="pagina"><div class="container">
+
+
+  <button
+    class="botao-voltar"
+    onclick="voltarPainel()">
+
+    ← Voltar ao painel
+
+  </button>
+
+
+  <div class="conteudo-modulo">
+
+
+    <h2>
+      📅 Agenda
+    </h2>
+
+
+    <br>
+
+
+    <p>
+      Aqui aparecerão as reuniões e eventos do clube.
+    </p>
+
+
+  </div>
+
+
+</div>
+
+  </main>  <!-- PÁGINA DE PRESENÇAS -->  <main id="presencas" class="pagina"><div class="container">
+
+
+  <button
+    class="botao-voltar"
+    onclick="voltarPainel()">
+
+    ← Voltar ao painel
+  </button>
+
+
+  <div class="conteudo-modulo">
+
+
+    <h2>
+      📋 Presenças
+    </h2>
+
+
+    <br>
+
+
+    <p>
+      Aqui será feito o controle de presença.
+    </p>
+
+
+  </div>
+
+
+</div>
+
+  </main>  <!-- PÁGINA DE CERTIFICADOS -->  <main id="certificados" class="pagina"><div class="container">
+
+
+  <button
+    class="botao-voltar"
+    onclick="voltarPainel()">
+
+    ← Voltar ao painel
+
+  </button>
+
+
+  <div class="conteudo-modulo">
+
+
+    <h2>
+      📜 Certificados
+    </h2>
+
+
+    <br>
+
+
+    <p>
+      Aqui serão gerenciados os certificados.
+    </p>
+
+
+  </div>
+
+
+</div>
+
+  </main>  <!-- PÁGINA DA BÍBLIA -->  <main id="biblia" class="pagina"><div class="container">
+
+
+  <button
+    class="botao-voltar"
+    onclick="voltarPainel()">
+
+    ← Voltar ao painel
+
+  </button>
+
+
+  <div class="conteudo-modulo">
+
+
+    <h2>
+      📖 Bíblia
+    </h2>
+
+
+    <br>
+
+
+    <p>
+      Aqui ficará o acesso ao estudo bíblico.
+    </p>
+
+
+  </div>
+
+
+</div>
+
+  </main>  <!-- PÁGINA DO ANO BÍBLICO -->  <main id="ano-biblico" class="pagina"><div class="container">
+
+
+  <button
+    class="botao-voltar"
+    onclick="voltarPainel()">
+
+    ← Voltar ao painel
+
+  </button>
+
+
+  <div class="conteudo-modulo">
+
+
+    <h2>
+      📆 Ano Bíblico
+    </h2>
+
+
+    <br>
+
+
+    <p>
+      Aqui será acompanhado o progresso da leitura bíblica.
+    </p>
+
+
+  </div>
+
+
+</div>
+
+  </main>  <!-- PÁGINA DA BIBLIOTECA -->  <main id="biblioteca" class="pagina"><div class="container">
+
+
+  <button
+    class="botao-voltar"
+    onclick="voltarPainel()">
+
+    ← Voltar ao painel
+
+  </button>
+
+
+  <div class="conteudo-modulo">
+
+
+    <h2>
+      📚 Biblioteca
+    </h2>
+
+
+    <br>
+
+
+    <p>
+      Aqui ficarão os materiais permitidos para estudo.
+    </p>
+
+
+  </div>
+
+
+</div>
+
+  </main>  <!-- PÁGINA DE CONQUISTAS -->  <main id="conquistas" class="pagina"><div class="container">
+
+
+  <button
+    class="botao-voltar"
+    onclick="voltarPainel()">
+
+    ← Voltar ao painel
+
+  </button>
+
+
+  <div class="conteudo-modulo">
+
+
+    <h2>
+      🏆 Conquistas
+    </h2>
+
+
+    <br>
+
+
+    <p>
+      Aqui serão exibidas as conquistas dos membros.
+    </p>
+
+
+  </div>
+
+
+</div>
+
+  </main>  <footer>Orion DBV © 2026
+
+<br>
+
+Clube Neblina do Oeste
+
+  </footer>  <script>
+
+
+    function abrirPagina(id) {
+
+
+      document
+        .querySelectorAll('.pagina')
+        .forEach(function(pagina) {
+
+          pagina.classList.remove('ativa');
+
+        });
+
+
+      document
+        .getElementById(id)
+        .classList.add('ativa');
+
+
+      window.scrollTo(0, 0);
+
+    }
+
+
+    function voltarPainel() {
+
+
+      document
+        .querySelectorAll('.pagina')
+        .forEach(function(pagina) {
+
+          pagina.classList.remove('ativa');
+
+        });
+
+
+      document
+        .getElementById('painel')
+        .classList.add('ativa');
+
+
+      window.scrollTo(0, 0);
+
+    }
+
+
+    function mostrarFormularioMembro() {
+
+
+      document
+        .getElementById("formulario-membro")
+        .style.display = "block";
+
+
+      document
+        .getElementById("lista-membros")
+        .style.display = "none";
+
+    }
+
+
+    function cancelarFormularioMembro() {
+
+
+      document
+        .getElementById("formulario-membro")
+        .style.display = "none";
+
+
+      document
+        .getElementById("lista-membros")
+        .style.display = "block";
+
+    }
+
+
+    function salvarMembro() {
+
+
+      const nome =
+        document
+        .getElementById("nome-membro")
+        .value;
+
+
+      const nascimento =
+        document
+        .getElementById("nascimento-membro")
+        .value;
+
+
+      const unidade =
+        document
+        .getElementById("unidade-membro")
+        .value;
+
+
+      const classe =
+        document
+        .getElementById("classe-membro")
+        .value;
+
+
+      if (!nome) {
+
+
+        alert(
+          "Digite o nome completo do membro."
+        );
+
+
+        return;
+
+      }
+
+
+      alert(
+
+        "Membro preenchido com sucesso!\n\n" +
+
+        "Clube: Neblina do Oeste\n" +
+
+        "Nome: " + nome + "\n" +
+
+        "Unidade: " + unidade + "\n" +
+
+        "Classe: " + classe
+
+      );
+
+    }
+
+
+  </script></body></html>
