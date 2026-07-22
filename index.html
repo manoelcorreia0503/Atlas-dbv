@@ -685,13 +685,10 @@ Clube Neblina do Oeste
 
 <script type="module">
 function abrirPagina(id) {
-
   document
     .querySelectorAll('.pagina')
     .forEach(function(pagina) {
-
       pagina.classList.remove('ativa');
-
     });
 
   document
@@ -699,17 +696,13 @@ function abrirPagina(id) {
     .classList.add('ativa');
 
   window.scrollTo(0, 0);
-
 }
 
 function voltarPainel() {
-
   document
     .querySelectorAll('.pagina')
     .forEach(function(pagina) {
-
       pagina.classList.remove('ativa');
-
     });
 
   document
@@ -717,72 +710,57 @@ function voltarPainel() {
     .classList.add('ativa');
 
   window.scrollTo(0, 0);
-
 }
 
 function mostrarFormularioMembro() {
-
-  document
-    .getElementById("formulario-membro")
-    .style.display = "block";
-
-  document
-    .getElementById("lista-membros")
-    .style.display = "none";
-
+  document.getElementById("formulario-membro").style.display = "block";
+  document.getElementById("lista-membros").style.display = "none";
 }
 
 function cancelarFormularioMembro() {
-
-  document
-    .getElementById("formulario-membro")
-    .style.display = "none";
-
-  document
-    .getElementById("lista-membros")
-    .style.display = "block";
-
+  document.getElementById("formulario-membro").style.display = "none";
+  document.getElementById("lista-membros").style.display = "block";
 }
 
 function salvarMembro() {
-
   const nome =
-    document
-    .getElementById("nome-membro")
-    .value;
+    document.getElementById("nome-membro").value;
 
   const nascimento =
-    document
-    .getElementById("nascimento-membro")
-    .value;
+    document.getElementById("nascimento-membro").value;
 
   const unidade =
-    document
-    .getElementById("unidade-membro")
-    .value;
+    document.getElementById("unidade-membro").value;
 
   const classe =
-    document
-    .getElementById("classe-membro")
-    .value;
+    document.getElementById("classe-membro").value;
 
   if (!nome) {
-
-    alert(
-      "Digite o nome completo do membro."
-    );
-
+    alert("Digite o nome completo do membro.");
     return;
-
   }
 
-  alert(
-  "Membro cadastrado"
-);
-
+  alert("Membro cadastrado");
 }
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 
-</script>
+import {
+  getFirestore,
+  collection,
+  addDoc
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
+const firebaseConfig = {
+  apiKey: "AIzaSyBDywZUgF6ij7QsYB6Wd2cGnEBmb5xetqQ",
+  authDomain: "atlas-dbv.firebaseapp.com",
+  projectId: "atlas-dbv",
+  storageBucket: "atlas-dbv.firebasestorage.app",
+  messagingSenderId: "233032570160",
+  appId: "1:233032570160:web:b18213f099c69cc3b224f5"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+  </script>
 </body>
 </html>
