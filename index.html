@@ -724,45 +724,26 @@ function cancelarFormularioMembro() {
 
 async function salvarMembro() {
 
-  const nome = document.getElementById("nome-membro").value;
-
+  const nome = document.getElementById("nome-membro").value.trim();
   const nascimento = document.getElementById("nascimento-membro").value;
-
   const unidade = document.getElementById("unidade-membro").value;
-
   const classe = document.getElementById("classe-membro").value;
 
-  if (nome === "") {
-
+  if (!nome) {
     alert("Digite o nome completo.");
-
     return;
-
   }
 
   try {
 
-    await addDoc(
-
-      collection(db, "membros"),
-
-      {
-
-        nome: nome,
-
-        nascimento: nascimento,
-
-        unidade: unidade,
-
-        classe: classe,
-
-        ativo: true,
-
-        criadoEm: new Date()
-
-      }
-
-    );
+    await addDoc(collection(db, "membros"), {
+      nome: nome,
+      nascimento: nascimento,
+      unidade: unidade,
+      classe: classe,
+      ativo: true,
+      criadoEm: new Date()
+    });
 
     alert("Membro salvo com sucesso!");
 
@@ -773,30 +754,10 @@ async function salvarMembro() {
 
     cancelarFormularioMembro();
 
-  }
-
-  catch (erro) {
-
-    console.log(erro);
-
-    alert("Erro ao salvar no Firebase.");
-
-  }
-
-  }
-
-    document.getElementById("nome-membro").value = "";
-    document.getElementById("nascimento-membro").value = "";
-    document.getElementById("unidade-membro").value = "";
-    document.getElementById("classe-membro").value = "";
-
-    cancelarFormularioMembro();
-
   } catch (erro) {
 
-    alert("Erro ao cadastrar o membro.");
-
     console.error(erro);
+    alert("Erro ao salvar no Firebase.");
 
   }
 
