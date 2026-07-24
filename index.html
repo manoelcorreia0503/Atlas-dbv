@@ -683,7 +683,7 @@ Orion DBV © 2026
 Clube Neblina do Oeste
 </footer>
 
-<script>
+<script type="module">
 function abrirPagina(id) {
   document
     .querySelectorAll('.pagina')
@@ -757,7 +757,10 @@ async function salvarMembro() {
   } catch (erro) {
 
     console.error(erro);
-alert(erro.message);
+console.log(erro.code);
+console.log(erro.message);
+
+alert(erro.code + "\n\n" + erro.message);
 
   }
 
